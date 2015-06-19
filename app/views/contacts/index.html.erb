@@ -17,9 +17,9 @@
     <% @contacts.each do |contact| %>
       <tr>
         <td><%= link_to contact.full_name, edit_contact_path(contact) %></td>
-        <td><%= link_to contact.department.try(:name), edit_contact_path(contact) %></td>
-        <td><%= link_to contact.phone, edit_contact_path(contact) %></td>
-        <td><%= link_to contact.email, edit_contact_path(contact) %></td>
+        <td><%= contact.department.try(:name) %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.email %></td>
         <td><%= link_to 'Remove Contact', contact, method: :delete, data: { confirm: "Delete?" } %></td>
       </tr>
     <% end %>
@@ -29,3 +29,4 @@
 <br>
 
 <%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'Manage Departments', departments_path %>
