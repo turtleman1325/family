@@ -16,8 +16,8 @@
     <%= f.text_field :full_name %>
   </div>
   <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
+    <%= f.label :department %><br>
+    <%= f.select :department_id, Department.all.collect {|c| [ c.name, c.id ] } %>
   </div>
   <div class="field">
     <%= f.label :phone %><br>
