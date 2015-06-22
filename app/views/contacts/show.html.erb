@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h2><%= @contact.full_name %></h2>
+  <h2>
+    <%= @contact.full_name %>
+    <%= @contact.last_name %>
+  </h2>
   <%= link_to 'Edit', edit_contact_path %>
 </p>
 
 <p>
-  <strong>Works At: </strong>
+  <strong>Works in: </strong>
   <%= @contact.department.name %>
 </p>
 

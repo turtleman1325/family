@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(version: 20150622170317) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "full_name"
+    t.string   "last_name"
     t.string   "phone"
     t.string   "email"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "department_id"
-    t.string   "last_name"
   end
 
   create_table "departments", force: :cascade do |t|
